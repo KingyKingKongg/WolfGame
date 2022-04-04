@@ -10,7 +10,7 @@ clear = lambda: os.system("clear")
 
 
 def wolfCreateTable(): #clear and create table
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('Wolf_SQL.db') #file name
 
     c = connection.cursor()
     
@@ -44,7 +44,7 @@ def addChartoDB(charid,character,shirtt,pants,location,location2,location3,locat
     global shirt, ranShirt, ranPants, greet1 
     global ranGreet1, ranGreet2, characters, ranChar, ranlocate, ranlocate2
 
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('Wolf_SQL.db') #file name
 
     c = connection.cursor()
 
@@ -105,7 +105,7 @@ def createChar():  #Add to the database
     
     while char6 <= 6:
 
-        with open('/media/oem/Python Linux/WolfGame/WolfLocation.csv', 'r') as loc:
+        with open('WolfLocation.csv', 'r') as loc:
             #open and read csv file
             
             read = csv.reader(loc)
@@ -146,7 +146,7 @@ def createChar():  #Add to the database
 def theWOLF():  ##### this is your wolf/killer
     global wID, rowW
     
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('Wolf_SQL.db') #file name
 
     c = connection.cursor()
 
@@ -178,7 +178,7 @@ def theWOLF():  ##### this is your wolf/killer
 def guessWolf():
     global gameplaylocations
     
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('Wolf_SQL.db') #file name
 
     c = connection.cursor()
     
@@ -239,7 +239,7 @@ def guessWolf():
 def interview(up):
     global peopleN, rowW
     #################
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('Wolf_SQL.db') #file name
 
     c = connection.cursor()
     
@@ -470,7 +470,7 @@ def gameplay():
     
     #print(f'The wolf that bit you was {rowW[0]}\nTheyre wearing {rowW[1]} and {rowW[2]}\nAnd they did it at{rowW[3]}')
 
-    connection = sqlite3.connect('/media/oem/Python Linux/WolfGame/Wolf_SQL.db') #file name
+    connection = sqlite3.connect('/Wolf_SQL.db') #file name
 
     c = connection.cursor()
 
